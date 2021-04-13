@@ -1,0 +1,87 @@
+const testdata = {
+"config": {
+  "testId": "4d311050-9995-11eb-8ee8-9385d8c2d73d",
+  "serverId": 11603,
+  "testMethod": "wss,xhrs,xhrs",
+  "host": "ookla.uia.net.prod.hosts.ooklaserver.net",
+  "port": "8080",
+  "serverVersion": "2.7.5"
+},
+"device": {
+  "platform": "speedtest-custom"
+},
+"start": {
+  "timestamp": "2021-04-10T00:40:08.928Z"
+},
+"end": {
+  "timestamp": "2021-04-10T00:40:43.344Z"
+},
+"download": 54799,
+"upload": 49453,
+"units": "Kbps",
+"latency": {
+  "minimum": 12,
+  "jitter": 0.7777777777777778
+}
+};
+
+
+/*survey123WebForm.setStyle({
+  '&': {
+    'background': '#fefefe !important',
+    'overflow': 'auto !important',
+  },
+  '& > .container': {
+    'background': '#fefefe !important',
+    'border': 'solid 1px #f89927 !important',
+    'margin-bottom': '10px !important'
+  },
+  '& .form-header': {
+    'color': '#fefefe !important;',
+    'background-color': '#f89927 !important;'
+  },
+  '& .or-group:not(.or-appearance-field-list) > fieldset': {
+    'border-color': '#f89927 !important;'
+  },
+  '& .or-group:not(.or-appearance-field-list).or-appearance-compact > fieldset': {
+    'border-color': '#f89927 !important;'
+  },
+  '& .or-group > fieldset.group-wraper > legend > span': {
+    'color': '#f89927 !important;'
+  },
+  '& .or-group > fieldset.group-wraper > legend > i.webform-svg-icon.group_arrow path': {
+    'fill': '#f89927 !important;'
+  },
+  '& .or-group > fieldset.group-wraper > legend > i.webform-svg-icon.group_arrow:focus': {
+    'box-shadow': '0 0 0 6px rgba(248, 153, 39, 0.50) !important;'
+  },
+  '& .question': {
+    'padding': '10px 0 !important'
+  },
+  '& .question:not(.or-appearance-likert):not(.or-appearance-minimal):not(.or-appearance-autocomplete):not(.or-appearance-label):not(.or-appearance-list-nolabel) > fieldset > .option-wrapper > label[data-checked="true"]:not(.filler)': {
+    'border-color': '#f89927 !important;',
+    'background-color': '#rgba(248, 153, 39, 0.50) !important;'
+  },
+  '& .question:not(.or-appearance-likert):not(.or-appearance-minimal):not(.or-appearance-autocomplete):not(.or-appearance-label):not(.or-appearance-list-nolabel) > fieldset > .option-wrapper:not(.rank-widget) > label:not(.filler):not(.or-branch):hover': {
+    'border-color': '#f89927 !important;',
+    'background-color': 'rgba(248, 153, 39, 0.50) !important;'
+  },
+  '& .main .form-container div.form-footer': {
+    'padding': '0 0 10px 0 !important',
+    'background-color': '#fefefe !important'
+  },
+  '& .form-footer button#validate-form': {
+    'color': '#f89927 !important',
+    'border': 'solid 1px #f89927 !important',
+    'background-color': '#fefefe !important'
+  },
+  '& .form-footer button#validate-form:hover': {
+    'color': '#fefefe !important',
+    'font-weight': 'bold !important',
+    'border-color': '#fefefe !important',
+    'background-color': '#f89927 !important'
+  },
+  '& .powerBy': {
+    'display': 'none !important'
+  }
+});*/

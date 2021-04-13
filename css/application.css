@@ -1,0 +1,39 @@
+:root {
+  font-family: "Avenir Next", "Avenir", "Helvetica Neue", "sans-serif";
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  width: 100vw;
+  /*height: 100vh;*/
+  overflow: auto;
+}
+
+#main-section {
+  width: 100vw;
+  /*height: 100vh;*/
+  overflow: auto;
+}
+
+#survey123-panel {
+  width: 100%;
+  /*height: 100%;*/
+  overflow: auto;
+}
+
+#ookla-panel {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.panel.hide {
+  display: none;
+}
+
+.panel iframe {
+  width: 100%;
+  height: 100%;
+}
