@@ -2,11 +2,9 @@
  
 Collect information about connection speeds including location and user provided details via Survey123 and use OOKLA to automatically measure speeds.   
 
----
 ## Demo
 [Community Speed Test Survey](https://apl.bd.esri.com/SpeedTest/index.html)
 
----
 ## Technologies Used
 
 ### Esri Survey123
@@ -19,16 +17,15 @@ Collect information about connection speeds including location and user provided
 - [Passing Test Results To The Browser](https://support.ookla.com/hc/en-us/articles/115005319507-Passing-Test-Results-To-The-Browser)
 - [Storing STC results using Javascript](https://support.ookla.com/hc/en-us/articles/360000725112)
 
----
 
-### Deploy
+## Deploy
 
 This demo is built as a static web application.
 
 1 - Download and copy the root folder to a web accessible location\
 2 - Update the configuration parameters in ./config/application.json 
 
-### Configure
+## Configure
 
 Update the [application.json](https://github.com/jgrayson-apl/OOKLSpeedTest/blob/master/config/application.json) file in your favorite json editor:
 
