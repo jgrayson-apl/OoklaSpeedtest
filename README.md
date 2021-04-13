@@ -16,12 +16,10 @@ Collect information about connection speeds including location and user provided
 
 
 ---
-Applications Prototype
-
-Geo Experience Center
-
-Esri
-
+   Applications Prototype\
+   Geo Experience Center\
+   Esri\
+   _April 2021_
 ---
-_April 2021_
+
 
