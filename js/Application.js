@@ -22,7 +22,7 @@ class Application extends Configurable {
   _configPath = './config/application.json';
 
   /**
-   * ttps://support.ookla.com/hc/en-us/articles/115005319507-Passing-Test-Results-To-The-Browser
+   * https://support.ookla.com/hc/en-us/articles/115005319507-Passing-Test-Results-To-The-Browser
    */
   constructor() {
     super();
