@@ -2,9 +2,9 @@
    
 Geo Experience Center, Esri\
 _April 2021_
----
 
-## Community Speed Test Survey
+--- 
+
 Collect information about connection speeds including location and user provided details via Survey123 and use OOKLA to automatically measure speeds.   
 
 ---
@@ -24,7 +24,7 @@ Collect information about connection speeds including location and user provided
 
 This demo is built as a static web application.
 
-   1 - Copy the \SpeedTest folder to a web accessible folder\
+   1 - Download and copy the root folder to a web accessible location\
    2 - Update configuration parameters in ./config/application.json 
 
 ### Configure
