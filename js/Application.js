@@ -35,37 +35,57 @@ class Application extends Configurable {
         node.innerHTML = this.config.title || 'Application';
       });
 
-      // PANELS //
-      const survey123Panel = document.getElementById('survey123-panel');
-      const ooklaPanel = document.getElementById('ookla-panel');
-      /**
-       * TOGGLE PANELS
-       *
-       * @param panelId { String } 'survey123-panel' | 'ookla-panel'
-       * @param delay { Number }
-       */
-      this.togglePanel = (panelId, delay) => {
-        setTimeout(() => {
-          survey123Panel.classList.toggle('hide', (panelId !== survey123Panel.id));
-          ooklaPanel.classList.toggle('hide', (panelId !== ooklaPanel.id));
-        }, delay || 500);
-      };
+      // TOGGLE PANELS //
+      this.initializeTogglePanels();
 
-      //
-      // SURVEY123 //
-      //
+      /**
+       * SURVEY123
+       *
+       * @type {Function}
+       */
       const testCompleteHandler = this.initializeSurvey123();
 
-      //
-      // OOKLA //
-      //
-      this.initializeOOKLA(testCompleteHandler);
+      /**
+       * OOKLA
+       */
+      this.initializeOOKLA({
+        testCompleteHandler,
+        ooklaUrl: this.config.ooklaUrl
+      });
 
     });
   }
 
   /**
+   *
+   */
+  initializeTogglePanels() {
+
+    // PANELS //
+    const survey123Panel = document.getElementById('survey123-panel');
+    const ooklaPanel = document.getElementById('ookla-panel');
+
+    /**
+     * TOGGLE PANELS
+     *
+     * @param panelId { String } 'survey123-panel' | 'ookla-panel'
+     * @param delay { Number }
+     */
+    this.togglePanel = (panelId, delay) => {
+      setTimeout(() => {
+        survey123Panel.classList.toggle('hide', (panelId !== survey123Panel.id));
+        ooklaPanel.classList.toggle('hide', (panelId !== ooklaPanel.id));
+      }, delay || 500);
+    };
+
+  }
+
+  /**
    * https://developers.arcgis.com/survey123/api-reference/web-app/Survey123WebFormOptions
+   */
+  /**
+   *
+   * @returns {Function}
    */
   initializeSurvey123() {
 
@@ -78,7 +98,6 @@ class Application extends Configurable {
       clientId: this.config.clientId,
       itemId: this.config.itemId,
       autoRefresh: 3,
-      //hideElements: ["navbar", "header", "subheader", "footer"],
       onFormLoaded: function (data) {
         //console.info('onFormLoaded: ', data, survey123WebForm);
 
@@ -95,10 +114,16 @@ class Application extends Configurable {
       }
     });
 
-
-    // QUESTION VALUE CHANGE //
+    /**
+     * QUESTION VALUE CHANGE
+     *  -  DISPLAY OOKLA PANEL WHEN USER
+     *     CONFIRMS INTERNET AVAILABILITY
+     *
+     * @param data
+     */
     const onQuestionValueChange = (data) => {
       //console.info('onQuestionValueChange: ', data.field);
+      // Q: Is internet available at this location? //
       if ((data.field === 'internet') && (data.value === 'yes')) {
         this.togglePanel('ookla-panel');
       }
@@ -111,17 +136,23 @@ class Application extends Configurable {
     // FORMAT LATENCY //
     const toLatency = val => Math.round(val).toFixed(0);
 
-    // TEST COMPLETE //
+    /**
+     * THIS METHOD IS CALLED WITH THE TEST RESULTS
+     * AFTER OOKLA HAS COMPLETED THE SPEED TEST
+     *
+     * @param data
+     */
     const testCompleteHandler = (data) => {
       //console.info('testCompleteHandler: ', JSON.stringify(data));
 
-      //survey123WebForm.setQuestionValue({"isp": data.config.host});
+      // ANSWER SPEED TEST RELATED QUESTIONS //
       survey123WebForm.setQuestionValue({"downloadSpeed": toMbps(data.download)});
       survey123WebForm.setQuestionValue({"uploadSpeed": toMbps(data.upload)});
       survey123WebForm.setQuestionValue({"ping": toLatency(data.latency.minimum)});
       survey123WebForm.setQuestionValue({"jitter": toLatency(data.latency.jitter)});
 
-      this.togglePanel('survey123-panel', 2500);
+      // DISPLAY SURVEY123 PANEL //
+      this.togglePanel('survey123-panel', 2000);
     }
 
     return testCompleteHandler;
@@ -133,30 +164,38 @@ class Application extends Configurable {
    * https://support.ookla.com/hc/en-us/articles/115003370267-Embed-Your-Test-on-Your-Website
    * https://support.ookla.com/hc/en-us/articles/115001660712-Hosting-the-HTML5-front-end-Test-UI-on-your-site
    *
+   * @param ooklaUrl { string }
+   * @param testCompleteHandler { Function }
    */
-  initializeOOKLA(testCompleteHandler) {
+  initializeOOKLA({ooklaUrl, testCompleteHandler}) {
+    if (ooklaUrl) {
 
-    // CONFIGURE OOKLA IFRAME //
-    const ooklaContainer = document.getElementById('ookla-container');
-    ooklaContainer.src = this.config.ooklaUrl;
+      // DYNAMICALLY CONFIGURE OOKLA IFRAME FROM CONFIGURATION //
+      const ooklaContainer = document.getElementById('ookla-container');
+      ooklaContainer.src = ooklaUrl;
 
-    // WINDOW MESSAGE EVENTS //
-    const attachToWindow = (listener) => {
-      if (window.addEventListener) {
-        window.addEventListener("message", listener);
-      } else if (window.attachEvent) {
-        window.attachEvent("onmessage", listener);
+      // TEST IS COMPLETE //
+      const ooklaTestCompleted = (event) => {
+        // VERIFY MESSAGE ORIGIN //
+        if (event.origin !== this.config.ooklaUrl) { return; }
+        // CALL TEST COMPLETE HANDLER //
+        testCompleteHandler && testCompleteHandler(event.data);
       }
-    }
 
-    // TEST IS COMPLETE //
-    const testCompleted = (event) => {
-      if (event.origin !== this.config.ooklaUrl) { return; }
-      testCompleteHandler && testCompleteHandler(event.data);
-    }
+      // WINDOW MESSAGE EVENTS //
+      const attachToWindow = (listener) => {
+        if (window.addEventListener) {
+          window.addEventListener("message", listener);
+        } else if (window.attachEvent) {
+          window.attachEvent("onmessage", listener);
+        }
+      }
 
-    // LISTEN FOR WHEN THE OOKLA TEST IS COMPLETE //
-    attachToWindow(testCompleted);
+      // LISTEN FOR WHEN THE OOKLA TEST IS COMPLETE //
+      attachToWindow(ooklaTestCompleted);
+    } else {
+      console.error(new Error(`Missing 'ooklaUrl' parameter...`));
+    }
   }
 
 }
