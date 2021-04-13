@@ -1,8 +1,14 @@
 # OOKLSpeedTest
+   
+Geo Experience Center, Esri\
+_April 2021_
+---
 
 ## Community Speed Test Survey
 Collect information about connection speeds including location and user provided details via Survey123 and use OOKLA to automatically measure speeds.   
 
+---
+## Learn More
 
 ### Survey123
 - https://developers.arcgis.com/survey123/api-reference/web-app/Survey123WebFormOptions
@@ -14,12 +20,18 @@ Collect information about connection speeds including location and user provided
 - https://support.ookla.com/hc/en-us/articles/115001660712-Hosting-the-HTML5-front-end-Test-UI-on-your-site
 - https://support.ookla.com/hc/en-us/articles/115005319507-Passing-Test-Results-To-The-Browser
 
+---
+### Deploy
+   1 - Copy \SpeedTest folder to a web accessible folder\
+   2 - Update configuration parameters in ./config/application.json 
 
----
-   Applications Prototype\
-   Geo Experience Center\
-   Esri\
-   _April 2021_
----
+### Configure 
+
+Update the application.json file in your favorite json editor:
+
+- portalUrl: 
+- clientId: 
+- itemId: 
+- ooklaUrl: 
 
 
