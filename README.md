@@ -1,12 +1,10 @@
 # OOKLSpeedTest
  
-> jgrayson@esri.com\
-> Geo Experience Center, Esri\
-> _April 2021_
-
---- 
-
 Collect information about connection speeds including location and user provided details via Survey123 and use OOKLA to automatically measure speeds.   
+
+---
+## Demo
+[Community Speed Test Survey](https://apl.bd.esri.com/SpeedTest/index.html)
 
 ---
 ## Technologies Used
@@ -22,6 +20,7 @@ Collect information about connection speeds including location and user provided
 - [Storing STC results using Javascript](https://support.ookla.com/hc/en-us/articles/360000725112)
 
 ---
+
 ### Deploy
 
 This demo is built as a static web application.
@@ -33,10 +32,15 @@ This demo is built as a static web application.
 
 Update the [application.json](https://github.com/jgrayson-apl/OOKLSpeedTest/blob/master/config/application.json) file in your favorite json editor:
 
-
 | parameter | details |
 | ---: | --- |
 | **portalUrl** | Organization or Enterprise URL; example: https://www.arcgis.com |
 | **clientId**  | The client ID is a string that proves that you have explicitly authorized the use of Survey123 web app API from your web page. You need to create the Client ID through the https://developers.arcgis.com/ website. |
 | **itemId**    | This is the ArcGIS itemID of your web form. |
 | **ooklaUrl**  | This is the custom OOKLA test url you've configured at https://account.speedtestcustom.com/login |
+
+
+### Contact
+> jgrayson@esri.com\
+> Geo Experience Center, Esri\
+> _April 2021_
