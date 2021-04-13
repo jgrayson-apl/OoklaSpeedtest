@@ -37,6 +37,9 @@ Update the [application.json](https://github.com/jgrayson-apl/OOKLSpeedTest/blob
 | **ooklaUrl**  | This is the custom OOKLA test url you've configured at https://account.speedtestcustom.com/login |
 
 
+## TODO
+- no oauth authentication implemented
+
 ### Contact
 > jgrayson@esri.com\
 > Geo Experience Center, Esri\
