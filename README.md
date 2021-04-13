@@ -38,7 +38,7 @@ Update the [application.json](https://github.com/jgrayson-apl/OOKLSpeedTest/blob
 
 
 ## TODO
-- no oauth authentication implemented
+- no OAuth authentication implemented.
 
 ### Contact
 > jgrayson@esri.com\
