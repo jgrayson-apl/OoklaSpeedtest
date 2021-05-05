@@ -42,10 +42,7 @@ class Application extends Configurable {
       const testCompleteHandler = this.initializeSurvey123();
 
       // OOKLA //
-      this.initializeOOKLA({
-        ooklaUrl: this.config.ooklaUrl,
-        testCompleteHandler
-      });
+      this.initializeOOKLA({ooklaUrl: this.config.ooklaUrl, testCompleteHandler});
 
     });
   }
