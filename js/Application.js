@@ -43,15 +43,15 @@ class Application extends Configurable {
 
       // OOKLA //
       this.initializeOOKLA({
-        testCompleteHandler,
-        ooklaUrl: this.config.ooklaUrl
+        ooklaUrl: this.config.ooklaUrl,
+        testCompleteHandler
       });
 
     });
   }
 
   /**
-   *
+   * UTILITY TO TOGGLE PANELS //
    */
   initializeTogglePanels() {
 
