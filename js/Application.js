@@ -38,16 +38,10 @@ class Application extends Configurable {
       // TOGGLE PANELS //
       this.initializeTogglePanels();
 
-      /**
-       * SURVEY123
-       *
-       * @type {Function}
-       */
+      // SURVEY123 //
       const testCompleteHandler = this.initializeSurvey123();
 
-      /**
-       * OOKLA
-       */
+      // OOKLA //
       this.initializeOOKLA({
         testCompleteHandler,
         ooklaUrl: this.config.ooklaUrl
@@ -146,6 +140,10 @@ class Application extends Configurable {
       //console.info('testCompleteHandler: ', JSON.stringify(data));
 
       // ANSWER SPEED TEST RELATED QUESTIONS //
+      //  - MAP THE SURVEY123 QUESTIONS TO THE OOKLA TEST RESULTS
+      //
+      // TODO: MOVE THIS TO THE CONFIGURATION FILE
+      //
       survey123WebForm.setQuestionValue({"downloadSpeed": toMbps(data.download)});
       survey123WebForm.setQuestionValue({"uploadSpeed": toMbps(data.upload)});
       survey123WebForm.setQuestionValue({"ping": toLatency(data.latency.minimum)});
@@ -170,7 +168,7 @@ class Application extends Configurable {
   initializeOOKLA({ooklaUrl, testCompleteHandler}) {
     if (ooklaUrl) {
 
-      // DYNAMICALLY CONFIGURE OOKLA IFRAME FROM CONFIGURATION //
+      // DYNAMICALLY CONFIGURE OOKLA IFRAME FROM CONFIG FILE //
       const ooklaContainer = document.getElementById('ookla-container');
       ooklaContainer.src = ooklaUrl;
 
