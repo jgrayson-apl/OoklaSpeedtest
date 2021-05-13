@@ -10,6 +10,7 @@ Collect information about connection speeds including location and user provided
 ### Esri Survey123
 - [Blog: Introducing the Survey123 Web App JavaScript API](https://community.esri.com/t5/arcgis-survey123-blog/introducing-the-survey123-web-app-javascript-api/ba-p/896667)
 - [Survey123WebFormOptions](https://developers.arcgis.com/survey123/api-reference/web-app/Survey123WebFormOptions)
+- Example survey for [Survey123Connect excel file](./assets/APL_Ookla_Survey.xlsx)
 
 ### OOKLA
 - [Embed Your Test on Your Website](https://support.ookla.com/hc/en-us/articles/115003370267-Embed-Your-Test-on-Your-Website)
@@ -36,7 +37,7 @@ Update the [application.json](https://github.com/jgrayson-apl/OOKLSpeedTest/blob
 | **ooklaUrl**  | This is the custom OOKLA test url you've configured at https://account.speedtestcustom.com/login |
 
 ## TODO
-- no OAuth authentication implemented.
+- No OAuth authentication implemented.
 
 ### Contact
 > [jgrayson@esri.com](mailto:jgrayson@esri.com?subject=OOKLASpeedTest%20on%20GitHub&body=Hi%20John,%0A%20%20I%20have%20a%20quesiton%20about%20the%20OOKLA%20Speed%20Test%20demo.)\
