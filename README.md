@@ -39,6 +39,6 @@ Update the [application.json](https://github.com/jgrayson-apl/OOKLSpeedTest/blob
 - no OAuth authentication implemented.
 
 ### Contact
-> [jgrayson@esri.com](mailto:jgrayson@esri.com?subject=SpeedTest)\
+> [jgrayson@esri.com](mailto:jgrayson@esri.com?subject=OOKLASpeedTest&body=I have a quesiton about the OOKLA Speed Test app.)\
 > Geo Experience Center, Esri\
 > _April 2021_
