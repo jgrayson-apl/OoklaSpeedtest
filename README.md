@@ -1,4 +1,4 @@
-# Ookla Speedtest
+# Ookla® Speedtest®
  
 Collect information about connection speeds including location and user provided details via Survey123 and use Ookla to automatically measure speeds.   
 
