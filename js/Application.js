@@ -41,7 +41,7 @@ class Application extends Configurable {
       // SURVEY123 //
       const testCompleteHandler = this.initializeSurvey123();
 
-      // OOKLA //
+      // Ookla //
       this.initializeOOKLA({ooklaUrl: this.config.ooklaUrl, testCompleteHandler});
 
     });
@@ -107,7 +107,7 @@ class Application extends Configurable {
 
     /**
      * QUESTION VALUE CHANGE
-     *  -  DISPLAY OOKLA PANEL WHEN USER
+     *  -  DISPLAY Ookla PANEL WHEN USER
      *     CONFIRMS INTERNET AVAILABILITY
      *
      * @param data
@@ -129,7 +129,7 @@ class Application extends Configurable {
 
     /**
      * THIS METHOD IS CALLED WITH THE TEST RESULTS
-     * AFTER OOKLA HAS COMPLETED THE SPEED TEST
+     * AFTER Ookla HAS COMPLETED THE SPEED TEST
      *
      * @param data
      */
@@ -137,7 +137,7 @@ class Application extends Configurable {
       //console.info('testCompleteHandler: ', JSON.stringify(data));
 
       // ANSWER SPEED TEST RELATED QUESTIONS //
-      //  - MAP THE SURVEY123 QUESTIONS TO THE OOKLA TEST RESULTS
+      //  - MAP THE SURVEY123 QUESTIONS TO THE Ookla TEST RESULTS
       //
       // TODO: MOVE THIS TO THE CONFIGURATION FILE
       //
@@ -186,7 +186,7 @@ class Application extends Configurable {
         }
       }
 
-      // LISTEN FOR WHEN THE OOKLA TEST IS COMPLETE //
+      // LISTEN FOR WHEN THE Ookla TEST IS COMPLETE //
       attachToWindow(ooklaTestCompleted);
     } else {
       console.error(new Error(`Missing 'ooklaUrl' parameter...`));

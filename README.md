@@ -3,14 +3,14 @@
 Collect information about connection speeds including location and user provided details via Survey123 and use Speedtest to automatically measure speeds.   
 
 ## Demo
-[Community Speed Test Survey](https://apl.bd.esri.com/SpeedTest/index.html)
+[Community Speed Test Survey](https://apl.bd.esri.com/Survey123Speedtest/index.html)
 
 ## Technologies Used
 
 ### Esri Survey123
 - [Blog: Introducing the Survey123 Web App JavaScript API](https://community.esri.com/t5/arcgis-survey123-blog/introducing-the-survey123-web-app-javascript-api/ba-p/896667)
 - [Survey123WebFormOptions](https://developers.arcgis.com/survey123/api-reference/web-app/Survey123WebFormOptions)
-- Example form as [Survey123Connect excel file](https://github.com/jgrayson-apl/OOKLSpeedTest/blob/master/assets/APL_Ookla_Survey.xlsx)
+- Example form as [Survey123Connect excel file](https://github.com/jgrayson-apl/OoklaSpeedtest/blob/master/assets/APL_Ookla_Survey.xlsx)
 
 ### Ookla Speedtest
 - [Embed Your Test on Your Website](https://support.ookla.com/hc/en-us/articles/115003370267-Embed-Your-Test-on-Your-Website)

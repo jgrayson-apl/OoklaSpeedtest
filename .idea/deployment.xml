@@ -5,14 +5,14 @@
       <paths name="S3 APL - DEV">
         <serverdata>
           <mappings>
-            <mapping deploy="\SpeedTest" local="$PROJECT_DIR$" web="/SpeedTest" />
+            <mapping deploy="\Survey123Speedtest" local="$PROJECT_DIR$" web="/Survey123Speedtest" />
           </mappings>
         </serverdata>
       </paths>
       <paths name="S3 APL - PRD">
         <serverdata>
           <mappings>
-            <mapping local="$PROJECT_DIR$" web="/" />
+            <mapping deploy="\Survey123Speedtest" local="$PROJECT_DIR$" web="/Survey123Speedtest" />
           </mappings>
         </serverdata>
       </paths>
