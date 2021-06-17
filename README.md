@@ -1,6 +1,6 @@
 # Connecting Esri Survey123 and Ookla® Speedtest®
  
-Collect information about connection speeds including location and user provided details via Survey123 and use Ookla to automatically measure speeds.   
+Collect information about connection speeds including location and user provided details via Survey123 and use Speedtest to automatically measure speeds.   
 
 ## Demo
 [Community Speed Test Survey](https://apl.bd.esri.com/SpeedTest/index.html)
