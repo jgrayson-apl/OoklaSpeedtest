@@ -12,7 +12,7 @@ Collect information about connection speeds including location and user provided
 - [Survey123WebFormOptions](https://developers.arcgis.com/survey123/api-reference/web-app/Survey123WebFormOptions)
 - Example form as [Survey123Connect excel file](https://github.com/jgrayson-apl/OoklaSpeedtest/blob/master/assets/APL_Ookla_Survey.xlsx)
 
-### Ookla Speedtest Custom  (*Premium required*)
+### Ookla Speedtest Custom *Premium*
 - [Embed Your Test on Your Website](https://support.ookla.com/hc/en-us/articles/115003370267-Embed-Your-Test-on-Your-Website)
 - [Hosting the HTML5 front-end Test UI on your site](https://support.ookla.com/hc/en-us/articles/115001660712-Hosting-the-HTML5-front-end-Test-UI-on-your-site)
 - [Passing Test Results To The Browser](https://support.ookla.com/hc/en-us/articles/115005319507-Passing-Test-Results-To-The-Browser)
@@ -34,7 +34,7 @@ Update the [application.json](https://github.com/jgrayson-apl/OoklaSpeedtest/blo
 | **portalUrl** | Organization or Enterprise URL; example: https://www.arcgis.com |
 | **clientId**  | The client ID (configured in the web application item page, Settings, 'App Registration') is a string that proves that you have explicitly authorized the use of Survey123 web app API from your web page. You need to create the Client ID through the https://developers.arcgis.com/ website. |
 | **itemId**    | This is the ArcGIS itemID of your web form. |
-| **ooklaUrl**  | This is the custom Ookla test url you've configured at https://account.speedtestcustom.com/login REQUIRED: must be https enabled.|
+| **ooklaUrl**  | REQUIRED: must be https enabled. REQUIRED: Speedtest Custom *Premium*. This is the custom Ookla test url you've configured at https://account.speedtestcustom.com/login |
 
 ## TODO
 - No OAuth authentication implemented.
