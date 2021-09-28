@@ -12,7 +12,7 @@ Collect information about connection speeds including location and user provided
 - [Survey123WebFormOptions](https://developers.arcgis.com/survey123/api-reference/web-app/Survey123WebFormOptions)
 - Example form as [Survey123Connect excel file](https://github.com/jgrayson-apl/OoklaSpeedtest/blob/master/assets/APL_Ookla_Survey.xlsx)
 
-### Ookla Speedtest Custom *Premium Subscription*
+### Ookla Speedtest Custom *<u>Premium Subscription</u>*
 - [Speedtest Custom](https://www.ookla.com/speedtest-custom)
 - [Embed Your Test on Your Website](https://support.ookla.com/hc/en-us/articles/115003370267-Embed-Your-Test-on-Your-Website)
 - [Hosting the HTML5 front-end Test UI on your site](https://support.ookla.com/hc/en-us/articles/115001660712-Hosting-the-HTML5-front-end-Test-UI-on-your-site)
