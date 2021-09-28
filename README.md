@@ -34,10 +34,11 @@ Update the [application.json](https://github.com/jgrayson-apl/OoklaSpeedtest/blo
 | **portalUrl** | Organization or Enterprise URL; example: https://www.arcgis.com |
 | **clientId**  | The client ID is a string that proves that you have explicitly authorized the use of Survey123 web app API from your web page.<br><br>You can create the Client ID through the https://developers.arcgis.com/ website, or via the web application item page, 'Settings' tab, 'App Registration' section.|
 | **itemId**    | This is the ArcGIS item ID of your Survey123 web form. |
-| **ooklaUrl**  | This is the custom Ookla test url you've configured at https://account.speedtestcustom.com/login <br><br>REQUIRED<ul><li>Speedtest Custom *Premium*.</li><li>Must be https enabled.</li></ul>|
+| **ooklaUrl**  | This is the custom Ookla test url you've configured at https://account.speedtestcustom.com/login <br><br>**REQUIRED**<ul><li>Speedtest Custom *Premium*.</li><li>Must be https enabled.</li></ul>|
 
 ## TODO
-- No OAuth authentication implemented.  All ArcGIS Online items should be shared publicly.
+- No OAuth authentication implemented.
+- **REQUIRED**: All ArcGIS Online items must be shared publicly.
 
 ### Contacts
 
