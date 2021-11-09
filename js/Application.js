@@ -100,7 +100,7 @@ class Application extends Configurable {
     const hasValidRedirectURL = _isValidURL(this.config.redirectOnSubmitUrl);
 
     // REDIRECT ON FORM SUBMISSION //
-    const redirectOnSubmit = () =>{
+    const redirectOnSubmit = () => {
       window.open(this.config.redirectOnSubmitUrl, "_top");
     }
 
