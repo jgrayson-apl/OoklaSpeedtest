@@ -36,6 +36,7 @@ Update the [application.json](https://github.com/jgrayson-apl/OoklaSpeedtest/blo
 | **clientId**  | The client ID is a string that proves that you have explicitly authorized the use of Survey123 web app API from your web page.<br><br>You can create the Client ID through the https://developers.arcgis.com/ website, or via the web application item page, 'Settings' tab, 'App Registration' section.|
 | **itemId**    | This is the ArcGIS item ID of your Survey123 web form. |
 | **ooklaUrl**  | This is the custom Ookla test url configured at https://account.speedtestcustom.com/login <br><br>**REQUIRED**<ul><li>Speedtest Custom *Premium Subscription*.</li><li>Check **ON** 'Enable HTTPS'</li></ul>**RECOMMENDED**<ul><li>Check **ON** 'Auto Start' - Enable Test to Start Automatically</li></ul>|
+| **redirectOnSubmitUrl** | The application will redirect to this URL on form submission |
 
 ## TODO
 - No OAuth authentication implemented.

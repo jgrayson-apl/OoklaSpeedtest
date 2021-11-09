@@ -72,6 +72,7 @@ class Application extends Configurable {
   }
 
   /**
+   * https://developers.arcgis.com/survey123/api-reference/web-app
    * https://developers.arcgis.com/survey123/api-reference/web-app/Survey123WebFormOptions
    */
   /**
@@ -79,6 +80,29 @@ class Application extends Configurable {
    * @returns {Function}
    */
   initializeSurvey123() {
+
+    /**
+     *
+     * IS VALID REDIRECT URL?
+     *
+     * https://www.regextester.com/94502
+     *
+     * @param {string} string
+     * @returns {boolean}
+     * @private
+     */
+    const isURL = /^(?:http(s)?:\/\/)?[\w.-]+(?:\.[\w\.-]+)+[\w\-\._~:/?#[\]@!\$&'\(\)\*\+,;=.]+$/g;
+    const _isValidURL = (string) => {
+      return string && isURL.test(string);
+    };
+
+    // DO WE HAVE A VALID REDIRECT URL? //
+    const hasValidRedirectURL = _isValidURL(this.config.redirectOnSubmitUrl);
+
+    // REDIRECT ON FORM SUBMISSION //
+    const redirectOnSubmit = () =>{
+      window.open(this.config.redirectOnSubmitUrl, "_top");
+    }
 
     //
     // SURVEY123 WEB FORM //
@@ -88,9 +112,14 @@ class Application extends Configurable {
       portalUrl: this.config.portalUrl,
       clientId: this.config.clientId,
       itemId: this.config.itemId,
-      autoRefresh: 3,
+      autoRefresh: hasValidRedirectURL ? 0 : 3,
       onFormLoaded: function (data) {
         //console.info('onFormLoaded: ', data, survey123WebForm);
+
+        // REDIRECT ON FORM SUBMISSION //
+        if (hasValidRedirectURL) {
+          survey123WebForm.setOnFormSubmitted(redirectOnSubmit);
+        }
 
         // SURVEY QUESTION ANSWERED //
         survey123WebForm.setOnQuestionValueChanged(onQuestionValueChange);
