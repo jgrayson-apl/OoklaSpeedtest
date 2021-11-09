@@ -1,19 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData" autoUpload="On explicit save action" serverName="S3 APL - PRD" overwriteAll="false" deleteMissingItems="true" createEmptyFolders="true" autoUploadExternalChanges="true" showAutoUploadSettingsWarning="false">
+  <component name="PublishConfigData" autoUpload="On explicit save action" serverName="APL1 on S3 - DEV" overwriteAll="false" deleteMissingItems="true" createEmptyFolders="true" autoUploadExternalChanges="true">
     <serverData>
-      <paths name="S3 APL - DEV">
+      <paths name="APL on S3 - DEV">
         <serverdata>
           <mappings>
-            <mapping deploy="\Survey123Speedtest" local="$PROJECT_DIR$" web="/Survey123Speedtest" />
+            <mapping local="$PROJECT_DIR$" web="/" />
           </mappings>
         </serverdata>
       </paths>
-      <paths name="S3 APL - PRD">
+      <paths name="APL on S3 - PROD">
         <serverdata>
           <mappings>
-            <mapping deploy="\Survey123Speedtest" local="$PROJECT_DIR$" web="/Survey123Speedtest" />
+            <mapping local="$PROJECT_DIR$" web="/" />
           </mappings>
+        </serverdata>
+      </paths>
+      <paths name="APL1 on S3 - DEV">
+        <serverdata>
+          <mappings>
+            <mapping deploy="\DataCollection\Survey123Speedtest" local="$PROJECT_DIR$" web="/DataCollection/Survey123Speedtest" />
+          </mappings>
+          <excludedPaths>
+            <excludedPath local="true" path="$PROJECT_DIR$/.idea" />
+          </excludedPaths>
+        </serverdata>
+      </paths>
+      <paths name="APL1 on S3 - PROD">
+        <serverdata>
+          <mappings>
+            <mapping deploy="\DataCollection\Survey123Speedtest" local="$PROJECT_DIR$" web="/DataCollection/Survey123Speedtest" />
+          </mappings>
+          <excludedPaths>
+            <excludedPath local="true" path="$PROJECT_DIR$/.idea" />
+          </excludedPaths>
         </serverdata>
       </paths>
     </serverData>

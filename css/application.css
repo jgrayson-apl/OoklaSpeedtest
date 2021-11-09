@@ -19,8 +19,14 @@ body {
   overflow-x: hidden;
 }
 
+.panel {
+  position: absolute;
+  z-index: 1;
+}
+
 .panel.hide {
-  display: none;
+  z-index: 0;
+  /*display: none;*/
 }
 
 #survey123-panel {

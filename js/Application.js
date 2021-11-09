@@ -59,8 +59,8 @@ class Application extends Configurable {
     /**
      * TOGGLE PANELS
      *
-     * @param panelId { String } 'survey123-panel' | 'ookla-panel'
-     * @param delay { Number }
+     * @param { string } panelId  'survey123-panel' | 'ookla-panel'
+     * @param { number } delay
      */
     this.togglePanel = (panelId, delay) => {
       setTimeout(() => {
@@ -110,7 +110,7 @@ class Application extends Configurable {
      *  -  DISPLAY Ookla PANEL WHEN USER
      *     CONFIRMS INTERNET AVAILABILITY
      *
-     * @param data
+     * @param {Object} data
      */
     const onQuestionValueChange = (data) => {
       //console.info('onQuestionValueChange: ', data.field);
@@ -131,7 +131,7 @@ class Application extends Configurable {
      * THIS METHOD IS CALLED WITH THE TEST RESULTS
      * AFTER Ookla HAS COMPLETED THE SPEED TEST
      *
-     * @param data
+     * @param {Object} data
      */
     const testCompleteHandler = (data) => {
       //console.info('testCompleteHandler: ', JSON.stringify(data));
@@ -146,6 +146,11 @@ class Application extends Configurable {
       survey123WebForm.setQuestionValue({"ping": toLatency(data.latency.minimum)});
       survey123WebForm.setQuestionValue({"jitter": toLatency(data.latency.jitter)});
 
+      // const questions = survey123WebForm.getQuestions();
+      // const locationQuestions = questions[0].questions.map(q => { return `field: ${ q.name }`; });
+      // survey123WebForm.hideElements(locationQuestions);
+      //survey123WebForm.setParams({hide: `field: location`});
+
       // DISPLAY SURVEY123 PANEL //
       this.togglePanel('survey123-panel', 2000);
     }
@@ -159,8 +164,8 @@ class Application extends Configurable {
    * https://support.ookla.com/hc/en-us/articles/115003370267-Embed-Your-Test-on-Your-Website
    * https://support.ookla.com/hc/en-us/articles/115001660712-Hosting-the-HTML5-front-end-Test-UI-on-your-site
    *
-   * @param ooklaUrl { string }
-   * @param testCompleteHandler { Function }
+   * @param { string } ooklaUrl
+   * @param { Function } testCompleteHandler
    */
   initializeOOKLA({ooklaUrl, testCompleteHandler}) {
     if (ooklaUrl) {
