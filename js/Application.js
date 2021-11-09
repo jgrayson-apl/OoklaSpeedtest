@@ -146,11 +146,6 @@ class Application extends Configurable {
       survey123WebForm.setQuestionValue({"ping": toLatency(data.latency.minimum)});
       survey123WebForm.setQuestionValue({"jitter": toLatency(data.latency.jitter)});
 
-      // const questions = survey123WebForm.getQuestions();
-      // const locationQuestions = questions[0].questions.map(q => { return `field: ${ q.name }`; });
-      // survey123WebForm.hideElements(locationQuestions);
-      //survey123WebForm.setParams({hide: `field: location`});
-
       // DISPLAY SURVEY123 PANEL //
       this.togglePanel('survey123-panel', 2000);
     }
