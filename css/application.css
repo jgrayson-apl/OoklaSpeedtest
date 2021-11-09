@@ -19,16 +19,6 @@ body {
   overflow-x: hidden;
 }
 
-.panel {
-  position: absolute;
-  z-index: 1;
-}
-
-.panel.hide {
-  z-index: 0;
-  /*display: none;*/
-}
-
 #survey123-panel {
   width: 100%;
   min-height: 100vh;
@@ -42,6 +32,15 @@ body {
   overflow: hidden;
 }
 
+.panel {
+  position: absolute;
+  z-index: 1;
+}
+
+.panel.hide {
+  z-index: 0;
+  /*display: none;*/
+}
 
 .panel iframe {
   width: 100vw;
