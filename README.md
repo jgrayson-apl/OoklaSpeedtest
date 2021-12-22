@@ -3,7 +3,7 @@
 Collect information about connection speeds including location and user provided details via Survey123 and use Speedtest to automatically measure speeds.   
 
 ## Demo
-[Community Speed Test Survey](https://apl.bd.esri.com/apl1/DataCollection/Survey123Speedtest/index.html)
+[Community Speed Test Survey](https://geoxc-apps2.bd.esri.com/DataCollection/Survey123Speedtest/index.html)
 
 ## Technologies Used
 
@@ -30,13 +30,14 @@ This demo is built as a static web application.
 
 Update the [application.json](https://github.com/jgrayson-apl/OoklaSpeedtest/blob/master/config/application.json) file in your favorite json editor:
 
-| parameter | details |
-| ---: | --- |
-| **portalUrl** | Organization or Enterprise URL; example: https://www.arcgis.com |
-| **clientId**  | The client ID is a string that proves that you have explicitly authorized the use of Survey123 web app API from your web page.<br><br>You can create the Client ID through the https://developers.arcgis.com/ website, or via the web application item page, 'Settings' tab, 'App Registration' section.|
-| **itemId**    | This is the ArcGIS item ID of your Survey123 web form. |
-| **ooklaUrl**  | This is the custom Ookla test url configured at https://account.speedtestcustom.com/login <br><br>**REQUIRED**<ul><li>Speedtest Custom *Premium Subscription*.</li><li>Check **ON** 'Enable HTTPS'</li></ul>**RECOMMENDED**<ul><li>Check **ON** 'Auto Start' - Enable Test to Start Automatically</li></ul>|
-| **redirectOnSubmitUrl** | The application will redirect to this URL on form submission |
+|                  parameter | details                                                                                                                                                                                                                                                                                                     |
+|---------------------------:|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|              **portalUrl** | Organization or Enterprise URL; example: https://www.arcgis.com                                                                                                                                                                                                                                             |
+|               **clientId** | The client ID is a string that proves that you have explicitly authorized the use of Survey123 web app API from your web page.<br><br>You can create the Client ID through the https://developers.arcgis.com/ website, or via the web application item page, 'Settings' tab, 'App Registration' section.    |
+|                 **itemId** | This is the ArcGIS item ID of your Survey123 web form.                                                                                                                                                                                                                                                      |
+| **surveyInternetQuestion** | The Survey123 question *name* that triggers the SpeedTest form.                                                                                                                                                                                                                                             |
+|               **ooklaUrl** | This is the custom Ookla test url configured at https://account.speedtestcustom.com/login <br><br>**REQUIRED**<ul><li>Speedtest Custom *Premium Subscription*.</li><li>Check **ON** 'Enable HTTPS'</li></ul>**RECOMMENDED**<ul><li>Check **ON** 'Auto Start' - Enable Test to Start Automatically</li></ul> |
+|    **redirectOnSubmitUrl** | The application will redirect to this URL on form submission                                                                                                                                                                                                                                                |
 
 ## TODO
 - No OAuth authentication implemented.
