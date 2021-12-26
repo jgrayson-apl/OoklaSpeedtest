@@ -144,7 +144,7 @@ class Application extends Configurable {
     const onQuestionValueChange = (data) => {
       //console.info('onQuestionValueChange: ', data.field);
       // Q: Is internet available at this location? //
-      if ((data.field ===this.config.surveyInternetQuestion) && (data.value === 'yes')) {
+      if ((data.field === this.config.surveyInternetQuestion) && (data.value === 'yes')) {
         this.togglePanel('ookla-panel');
       }
     };
