@@ -45,7 +45,7 @@ Update the [application.json](https://github.com/jgrayson-apl/OoklaSpeedtest/blo
 
 ### Contacts
 
-[Please use this link to contact us about this demo.](mailto:jgrayson@esri.com;pryan@esri.com?subject=Survey123%20&%20OOKLA%20Speedtest%20Integration%20on%20GitHub&body=Hello,%0A%20%20I%20have%20a%20quesiton%20about%20the%20OOKLA%20Speed%20Test%20demo.) 
+[Please use this link to contact us about this demo.](mailto:jgrayson@esri.com;pryan@esri.com?subject=Survey123%20and%20OOKLA%20Speedtest%20Integration%20on%20GitHub&body=Hello,%0A%20%20I%20have%20a%20quesiton%20about%20the%20OOKLA%20Speed%20Test%20demo.) 
 
 For questions about Survey123 or broadband connectivity:
 > Patrick Ryan | Solution Engineer, Science-Civilian | Geospatial Center\
