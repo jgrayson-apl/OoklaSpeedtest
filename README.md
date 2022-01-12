@@ -45,13 +45,15 @@ Update the [application.json](https://github.com/jgrayson-apl/OoklaSpeedtest/blo
 
 ### Contacts
 
+[Please use this link to contact us about this demo.](mailto:jgrayson@esri.com;pryan@esri.com?subject=OoklaSpeedtest%20on%20GitHub&body=Hello,%0A%20%20I%20have%20a%20quesiton%20about%20the%20OOKLA%20Speed%20Test%20demo.) 
+
 For questions about Survey123 or broadband connectivity:
 > Patrick Ryan | Solution Engineer, Science-Civilian | Geospatial Center\
 > Esri | 8615 Westwood Center Drive | Vienna, VA 22182 | USA\
 > T 703 506 9515 x5070 | M 703 973 9600 | [pryan@esri.com](mailto:pryan@esri.com?subject=OoklaSpeedtest%20on%20GitHub&body=Hi%20Patrick,%0A%20%20I%20have%20a%20quesiton%20about%20the%20OOKLA%20Speed%20Test%20demo.) | [esri.com](https://www.esri.com)
 
  
-For questions about the demo web application:
+For questions about the JavaScrip web application:
 > John Grayson | Prototype Specialist | Geo Experience Center\
 > Esri | 380 New York St | Redlands, CA 92373 | USA\
-> T 909 793 2853 x1609 | [jgrayson@esri.com](mailto:jgrayson@esri.com?subject=OoklaSpeedtest%20on%20GitHub&body=Hi%20John,%0A%20%20I%20have%20a%20quesiton%20about%20the%20OOKLA%20Speed%20Test%20demo.) | [apl.esri.com](https://apl.esri.com) | [esri.com](https://www.esri.com)
+> T 909 793 2853 x1609 | [jgrayson@esri.com](mailto:jgrayson@esri.com?subject=OoklaSpeedtest%20on%20GitHub&body=Hi%20John,%0A%20%20I%20have%20a%20quesiton%20about%20the%20OOKLA%20Speed%20Test%20demo.) | [GeoXC Demos](https://www.esriurl.com/GeoXCDemos) | [esri.com](https://www.esri.com)
