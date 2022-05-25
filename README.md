@@ -39,11 +39,20 @@ Update the [application.json](https://github.com/jgrayson-apl/OoklaSpeedtest/blo
 |               **ooklaUrl** | This is the custom Ookla test url configured at https://account.speedtestcustom.com/login <br><br>**REQUIRED**<ul><li>Speedtest Custom *Premium Subscription*.</li><li>Check **ON** 'Enable HTTPS'</li></ul>**RECOMMENDED**<ul><li>Check **ON** 'Auto Start' - Enable Test to Start Automatically</li></ul> |
 |    **redirectOnSubmitUrl** | The application will redirect to this URL on form submission                                                                                                                                                                                                                                                |
 
+### Survey123 question names & Speedtest parameters
+
+| QUESTION NAME | PARAMETER            |
+|--------------:|----------------------|
+| downloadSpeed | data.download        | 
+|   uploadSpeed | data.upload          |
+|          ping | data.latency.minimum |
+|        jitter | data.latency.jitter  |
+
 ## TODO
 - No OAuth authentication implemented.
 - **REQUIRED**: All ArcGIS Online items must be shared publicly.
 
-### Contacts
+## Contacts
 
 ### Please use [this link to contact us](mailto:jgrayson@esri.com;pryan@esri.com?subject=Survey123%20and%20OOKLA%20Speedtest%20Integration%20on%20GitHub&body=Hello,%0A%20%20I%20have%20a%20quesiton%20about%20the%20OOKLA%20Speed%20Test%20demo) about this demo. 
 
