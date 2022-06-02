@@ -166,7 +166,7 @@ class Application extends Configurable {
       //console.info('testCompleteHandler: ', JSON.stringify(data));
 
       // ANSWER SPEED TEST RELATED QUESTIONS //
-      //  - MAP THE SURVEY123 QUESTIONS TO THE Ookla TEST RESULTS
+      //  - MAP THE SURVEY123 QUESTIONS TO THE OOKLA SPEEDTEST RESULTS
       //
       // TODO: MOVE THIS TO THE CONFIGURATION FILE
       //
@@ -174,6 +174,7 @@ class Application extends Configurable {
       survey123WebForm.setQuestionValue({"uploadSpeed": toMbps(data.upload)});
       survey123WebForm.setQuestionValue({"ping": toLatency(data.latency.minimum)});
       survey123WebForm.setQuestionValue({"jitter": toLatency(data.latency.jitter)});
+      survey123WebForm.setQuestionValue({"testId": data.config.testId});
 
       // DISPLAY SURVEY123 PANEL //
       this.togglePanel('survey123-panel', 2000);
@@ -225,3 +226,4 @@ class Application extends Configurable {
 }
 
 export default new Application();
+

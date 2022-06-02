@@ -47,6 +47,7 @@ Update the [application.json](https://github.com/jgrayson-apl/OoklaSpeedtest/blo
 |   uploadSpeed | data.upload          |
 |          ping | data.latency.minimum |
 |        jitter | data.latency.jitter  |
+|        testId | data.config.testId   |
 
 ## TODO
 - No OAuth authentication implemented.
