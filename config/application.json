@@ -3,7 +3,8 @@
   "description": "Test and submit your current internet connection speed.",
   "portalUrl": "https://www.arcgis.com",
   "clientId": "eU9mGLVOg9EdgLpx",
-  "itemId": "da8c83a265734990af2b22a742a5d852",
+  "itemId_JG": "da8c83a265734990af2b22a742a5d852",
+  "itemId": "7aef6a1268344ac8ba0f81c3ea0b4549",
   "surveyInternetQuestion": "internet",
   "ooklaUrl": "https://esriapl.speedtestcustom.com",
   "redirectOnSubmitUrl": null

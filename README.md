@@ -49,6 +49,12 @@ Update the [application.json](https://github.com/jgrayson-apl/OoklaSpeedtest/blo
 |        jitter | data.latency.jitter  |
 |        testId | data.config.testId   |
 
+### Application URL parameters
+You can use URL parameters to auto-populate Survey123 questions.  If a question with the same name as the URL parameter is found in the survey, the URL parameter value will be used as the question's answer.
+
+* URL syntax: ../index.html?[ **question_name** ]=[ **response_value** ]
+* Example: ../index.html?**location_id**=**123456**
+
 ## TODO
 - No OAuth authentication implemented.
 - **REQUIRED**: All ArcGIS Online items must be shared publicly.

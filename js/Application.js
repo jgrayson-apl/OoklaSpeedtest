@@ -72,6 +72,21 @@ class Application extends Configurable {
   }
 
   /**
+   *
+   * @param {{name:string}[]} questions
+   * @param {[]} list
+   * @returns {*}
+   */
+  getQuestionNames(questions, list = []) {
+    return questions.reduce((_list, question) => {
+      if (question.questions != null) {
+        this.getQuestionNames(question.questions, _list);
+      } else { _list.push(question.name); }
+      return _list;
+    }, list);
+  }
+
+  /**
    * https://developers.arcgis.com/survey123/api-reference/web-app
    * https://developers.arcgis.com/survey123/api-reference/web-app/Survey123WebFormOptions
    */
@@ -102,7 +117,7 @@ class Application extends Configurable {
     // REDIRECT ON FORM SUBMISSION //
     const redirectOnSubmit = () => {
       window.open(this.config.redirectOnSubmitUrl, "_top");
-    }
+    };
 
     //
     // SURVEY123 WEB FORM //
@@ -113,7 +128,7 @@ class Application extends Configurable {
       clientId: this.config.clientId,
       itemId: this.config.itemId,
       autoRefresh: hasValidRedirectURL ? 0 : 3,
-      onFormLoaded: function (data) {
+      onFormLoaded: (data) => {
         //console.info('onFormLoaded: ', data, survey123WebForm);
 
         // REDIRECT ON FORM SUBMISSION //
@@ -123,6 +138,20 @@ class Application extends Configurable {
 
         // SURVEY QUESTION ANSWERED //
         survey123WebForm.setOnQuestionValueChanged(onQuestionValueChange);
+
+        // URL PARAMETER QUESTIONS AND ANSWERS //
+        const urlParams = new URLSearchParams(document.location.search);
+        if ([...urlParams].length) {
+          // GET LIST OF SURVEY123 QUESTION NAMES //
+          const surveyQuestionNames = this.getQuestionNames(survey123WebForm.getQuestions());
+          // FOR EACH URL PARAMETER //
+          urlParams.forEach((value, key) => {
+            // IF WE HAVE A SURVEY123 QUESTION WITH THE SAME NAME //
+            if (surveyQuestionNames.includes(key)) {
+              survey123WebForm.setQuestionValue({[key]: value});
+            }
+          });
+        }
 
         // GOELOCAITON //
         if (navigator.geolocation) {
@@ -142,7 +171,8 @@ class Application extends Configurable {
      * @param {Object} data
      */
     const onQuestionValueChange = (data) => {
-      //console.info('onQuestionValueChange: ', data.field);
+      //console.info('onQuestionValueChange: ', data);
+
       // Q: Is internet available at this location? //
       if ((data.field === this.config.surveyInternetQuestion) && (data.value === 'yes')) {
         this.togglePanel('ookla-panel');
@@ -178,7 +208,7 @@ class Application extends Configurable {
 
       // DISPLAY SURVEY123 PANEL //
       this.togglePanel('survey123-panel', 2000);
-    }
+    };
 
     return testCompleteHandler;
   }
@@ -205,7 +235,7 @@ class Application extends Configurable {
         if (event.origin !== this.config.ooklaUrl) { return; }
         // CALL TEST COMPLETE HANDLER //
         testCompleteHandler && testCompleteHandler(event.data);
-      }
+      };
 
       // WINDOW MESSAGE EVENTS //
       const attachToWindow = (listener) => {
@@ -214,7 +244,7 @@ class Application extends Configurable {
         } else if (window.attachEvent) {
           window.attachEvent("onmessage", listener);
         }
-      }
+      };
 
       // LISTEN FOR WHEN THE Ookla TEST IS COMPLETE //
       attachToWindow(ooklaTestCompleted);

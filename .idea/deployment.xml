@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData" autoUpload="On explicit save action" serverName="APL-APPS2 - DEV" overwriteAll="false" deleteMissingItems="true" createEmptyFolders="true" autoUploadExternalChanges="true" showAutoUploadSettingsWarning="false">
+  <component name="PublishConfigData" autoUpload="On explicit save action" serverName="APL-APPS2 - PROD" overwriteAll="false" deleteMissingItems="true" createEmptyFolders="true" confirmBeforeUploading="false" confirmBeforeDeletion="false" autoUploadExternalChanges="true" showAutoUploadSettingsWarning="false">
+    <option name="confirmBeforeDeletion" value="false" />
+    <option name="confirmBeforeUploading" value="false" />
     <serverData>
       <paths name="APL-APPS - DEV">
         <serverdata>
