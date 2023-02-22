@@ -73,7 +73,8 @@ distance is further away than the _configured_ maximum distance threshold.
 | **source_longitude** | longitude location value (WGS 84) | 
 | **source_longitude** | latitude location value (WGS 84)  |
 
-Please note that the maximum distance threshold is a configuration parameter (part of the ), **NOT** a URL parameter.
+Please note that the maximum distance threshold is set in the app configuration (part of the _questionValue_ parameter),
+**NOT** a URL parameter.
 
 | CONFIGURATION PARAMETER NAME | VALIDATION USAGE           | DEFAULT    |
 |-----------------------------:|----------------------------|------------|
