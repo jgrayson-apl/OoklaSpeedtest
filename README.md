@@ -33,7 +33,7 @@ This demo is built as a static web application.
 
 Update the [application.json](https://github.com/jgrayson-apl/OoklaSpeedtest/blob/master/config/application.json) file in your favorite json editor:
 
-|                  parameter | details                                                                                                                                                                                                                                                                                                     |
+|                  PARAMETER | DETAILS                                                                                                                                                                                                                                                                                                     |
 |---------------------------:|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |              **portalUrl** | Organization or Enterprise URL; example: https://www.arcgis.com                                                                                                                                                                                                                                             |
 |               **clientId** | The client ID is a string that proves that you have explicitly authorized the use of Survey123 web app API from your web page.<br><br>You can create the Client ID through the https://developers.arcgis.com/ website, or via the web application item page, 'Settings' tab, 'App Registration' section.    |
@@ -64,22 +64,22 @@ You can use URL parameters to answer Survey123 questions. If a question with the
 
 An additional workflow is supported via a custom Survey123 Form to provide source location validation.
 The workflow starts with a Web Map that has Popups configured to use geographic coordinates stored as attributes
-and pass those into this application as URL parameters as specified above. The coordinate will be used to
-calculate the distance to the current device location and disable the OOKLA Speedtest if further away than the
-configured maximum distance threshold.
+and pass those into this application as URL parameters as described above. The coordinates will be used by the Survey123 Form to
+calculate the distance to the current device location and then disable the OOKLA Speedtest question if the calculated
+distance is further away than the _configured_ maximum distance threshold.
 
 |   URL PARAMETER NAME | VALIDATION USAGE                  |
 |---------------------:|-----------------------------------|
 | **source_longitude** | longitude location value (WGS 84) | 
 | **source_longitude** | latitude location value (WGS 84)  |
 
-Please note that the maximum distance threshold is a configuration parameter, NOT a URL parameter.
+Please note that the maximum distance threshold is a configuration parameter, **NOT** a URL parameter.
 
 | CONFIGURATION PARAMETER NAME | VALIDATION USAGE           | DEFAULT    |
 |-----------------------------:|----------------------------|------------|
-|             **max_distance** | maximum distance threshold | 100 (FEET) | 
+|             **max_distance** | maximum distance threshold | 100 (feet) | 
 
-Please use this source validation excel file for this scenario: [Survey123Connect excel file](https://github.com/jgrayson-apl/OoklaSpeedtest/blob/master/assets/APL_Ookla_Source_Validation.xlsx)
+Please use this source validation Excel file for this scenario: [Survey123Connect excel file](https://github.com/jgrayson-apl/OoklaSpeedtest/blob/master/assets/APL_Ookla_Source_Validation.xlsx)
 
 ## TODO
 
