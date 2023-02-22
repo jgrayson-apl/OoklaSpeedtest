@@ -7,5 +7,8 @@
   "itemId": "7aef6a1268344ac8ba0f81c3ea0b4549",
   "surveyInternetQuestion": "internet",
   "ooklaUrl": "https://esriapl.speedtestcustom.com",
-  "redirectOnSubmitUrl": null
+  "redirectOnSubmitUrl": null,
+  "questionValue": {
+    "max_distance": 100
+  }
 }

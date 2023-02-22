@@ -74,23 +74,23 @@ class Application extends Configurable {
   /**
    *
    * @param {{name:string}[]} questions
-   * @param {[]} list
+   * @param {Map<string,{}>} list
    * @returns {*}
    */
-  getQuestionNames(questions, list = []) {
+  getQuestionInfos(questions, list = new Map()) {
     return questions.reduce((_list, question) => {
       if (question.questions != null) {
-        this.getQuestionNames(question.questions, _list);
-      } else { _list.push(question.name); }
+        this.getQuestionInfos(question.questions, _list);
+      } else { _list.set(question.name, question); }
       return _list;
     }, list);
   }
 
   /**
    * https://developers.arcgis.com/survey123/api-reference/web-app
-   * https://developers.arcgis.com/survey123/api-reference/web-app/Survey123WebFormOptions
-   */
-  /**
+   *
+   * https://geoxc.maps.arcgis.com/apps/mapviewer/index.html?webmap=b9c6948a03a141ec886c73ab18bd2a1c
+   * https://apl-apps2.s3.us-west-2.amazonaws.com/DataCollection/Survey123Speedtest/index.html?source_longitude={longitude}&source_latitude={latitude}&source_id={location_id}
    *
    * @returns {Function}
    */
@@ -111,6 +111,8 @@ class Application extends Configurable {
       return string && isURL.test(string);
     };
 
+    const questionNumericFieldTypes = ['esriFieldTypeInteger', 'esriFieldTypeSmallInteger', 'esriFieldTypeSingle', 'esriFieldTypeDouble'];
+
     // DO WE HAVE A VALID REDIRECT URL? //
     const hasValidRedirectURL = _isValidURL(this.config.redirectOnSubmitUrl);
 
@@ -122,12 +124,15 @@ class Application extends Configurable {
     //
     // SURVEY123 WEB FORM //
     //
+    // https://developers.arcgis.com/survey123/api-reference/web-app/Survey123WebFormOptions
+    //
     const survey123WebForm = new Survey123WebForm({
       container: "survey123-panel",
       portalUrl: this.config.portalUrl,
       clientId: this.config.clientId,
       itemId: this.config.itemId,
       autoRefresh: hasValidRedirectURL ? 0 : 3,
+      questionValue: this.config.questionValue,
       onFormLoaded: (data) => {
         //console.info('onFormLoaded: ', data, survey123WebForm);
 
@@ -143,11 +148,13 @@ class Application extends Configurable {
         const urlParams = new URLSearchParams(document.location.search);
         if ([...urlParams].length) {
           // GET LIST OF SURVEY123 QUESTION NAMES //
-          const surveyQuestionNames = this.getQuestionNames(survey123WebForm.getQuestions());
+          const surveyQuestionInfos = this.getQuestionInfos(survey123WebForm.getQuestions());
           // FOR EACH URL PARAMETER //
           urlParams.forEach((value, key) => {
             // IF WE HAVE A SURVEY123 QUESTION WITH THE SAME NAME //
-            if (surveyQuestionNames.includes(key)) {
+            if (surveyQuestionInfos.has(key)) {
+              const question = surveyQuestionInfos.get(key);
+              questionNumericFieldTypes.includes(question.fieldType) && (value = Number(value));
               survey123WebForm.setQuestionValue({[key]: value});
             }
           });
@@ -232,9 +239,12 @@ class Application extends Configurable {
       // TEST IS COMPLETE //
       const ooklaTestCompleted = (event) => {
         // VERIFY MESSAGE ORIGIN //
-        if (event.origin !== this.config.ooklaUrl) { return; }
-        // CALL TEST COMPLETE HANDLER //
-        testCompleteHandler && testCompleteHandler(event.data);
+        if (event.origin === this.config.ooklaUrl) {
+          // CALL TEST COMPLETE HANDLER //
+          testCompleteHandler && testCompleteHandler(event.data);
+        } else {
+          console.warn("OOKLA Speedtest origin and 'ooklaUrl' configuration parameter do NOT match: ", event.origin, this.config.ooklaUrl);
+        }
       };
 
       // WINDOW MESSAGE EVENTS //
