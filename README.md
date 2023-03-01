@@ -64,7 +64,7 @@ You can use URL parameters to answer Survey123 questions. If a question with the
 #### Q: Are you where you say you are? 
 
 An additional workflow is supported via a custom Survey123 Form to provide source location validation.
-The workflow starts with a Web Map that has Popups configured to use geographic coordinates stored as attributes
+The workflow starts with a Web Map that has a Popup configured to use geographic coordinates stored as attributes
 and pass those into this application as URL parameters as described above. The coordinates will be used by the Survey123 Form to
 calculate the distance to the current device location and then disable the OOKLA Speedtest question if the calculated
 distance is further away than the _configured_ maximum distance threshold.
