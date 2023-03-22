@@ -89,7 +89,7 @@ Please use this source validation Excel file for this scenario: [Survey123Connec
 
 ## Contacts
 
-### If you have questions, please [contact us](mailto:jgrayson@esri.com;pryan@esri.com?subject=Survey123%20and%20OOKLA%20Speedtest%20Integration%20on%20GitHub&body=Hello,%0A%20%20I%20have%20a%20quesiton%20about%20the%20OOKLA%20Speed%20Test%20demo) about this demo.
+### If you have questions about this demo, please [contact us](mailto:jgrayson@esri.com;pryan@esri.com?subject=Survey123%20and%20OOKLA%20Speedtest%20Integration%20on%20GitHub&body=Hello,%0A%20%20I%20have%20a%20quesiton%20about%20the%20OOKLA%20Speed%20Test%20demo).
 
 For questions about Survey123 or broadband connectivity:
 > Patrick Ryan | Solution Engineer, Science-Civilian | Geospatial Center\
