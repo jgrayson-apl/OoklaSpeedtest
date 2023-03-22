@@ -94,10 +94,10 @@ Please use this source validation Excel file for this scenario: [Survey123Connec
 For questions about Survey123 or broadband connectivity:
 > Patrick Ryan | Solution Engineer, Science-Civilian | Geospatial Center\
 > Esri | 8615 Westwood Center Drive | Vienna, VA 22182 | USA\
-> T 703 506 9515 x5070 | M 703 973 9600 | pryan @ esri.com | [esri.com](https://www.esri.com)
+> T 703 506 9515 x5070 | M 703 973 9600 | pryan<span>@</span>esri.com | [esri.com](https://www.esri.com)
 
 
 For questions about the JavaScript web application:
 > John Grayson | Prototype Specialist | Geo Experience Center\
 > Esri | 380 New York St | Redlands, CA 92373 | USA\
-> T 909 793 2853 x1609 | jgrayson @ esri.com | [GeoXC Demos](https://www.esriurl.com/GeoXCDemos) | [esri.com](https://www.esri.com)
+> T 909 793 2853 x1609 | jgrayson<span>@</span>esri.com | [GeoXC Demos](https://www.esriurl.com/GeoXCDemos) | [esri.com](https://www.esri.com)
