@@ -39,10 +39,7 @@ class Application extends Configurable {
       this.initializeTogglePanels();
 
       // SURVEY123 //
-      const testCompleteHandler = this.initializeSurvey123();
-
-      // Ookla //
-      this.initializeOOKLA({ooklaUrl: this.config.ooklaUrl, testCompleteHandler});
+      this.initializeSurvey123();
 
     });
   }
@@ -170,21 +167,6 @@ class Application extends Configurable {
       }
     });
 
-    /**
-     * QUESTION VALUE CHANGE
-     *  -  DISPLAY Ookla PANEL WHEN USER
-     *     CONFIRMS INTERNET AVAILABILITY
-     *
-     * @param {Object} data
-     */
-    const onQuestionValueChange = (data) => {
-      //console.info('onQuestionValueChange: ', data);
-
-      // Q: Is internet available at this location? //
-      if ((data.field === this.config.surveyInternetQuestion) && (data.value === 'yes')) {
-        this.togglePanel('ookla-panel');
-      }
-    };
 
     // SPEED FORMATTER //
     const speedFormatter = new Intl.NumberFormat('default', {minimumFractionDigits: 1, maximumFractionDigits: 1});
@@ -217,7 +199,28 @@ class Application extends Configurable {
       this.togglePanel('survey123-panel', 2000);
     };
 
-    return testCompleteHandler;
+
+    /**
+     * QUESTION VALUE CHANGE
+     *  -  DISPLAY Ookla PANEL WHEN USER
+     *     CONFIRMS INTERNET AVAILABILITY
+     *
+     * @param {Object} data
+     */
+    const onQuestionValueChange = (data) => {
+      //console.info('onQuestionValueChange: ', data);
+
+      // Q: Is internet available at this location? //
+      if ((data.field === this.config.surveyInternetQuestion) && (data.value === 'yes')) {
+
+        // INITIALIZ OOKLA SPEEDTEST //
+        this.initializeOOKLA({ooklaUrl: this.config.ooklaUrl, testCompleteHandler});
+
+        // DISPLAY OOKLA SPPEEDTEST PANEL //
+        this.togglePanel('ookla-panel');
+      }
+    };
+
   }
 
   /**
