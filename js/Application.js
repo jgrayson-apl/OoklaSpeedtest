@@ -57,13 +57,13 @@ class Application extends Configurable {
      * TOGGLE PANELS
      *
      * @param { string } panelId  'survey123-panel' | 'ookla-panel'
-     * @param { number } delay
+     * @param { number } [delay]
      */
-    this.togglePanel = (panelId, delay) => {
+    this.togglePanel = (panelId, delay = 500) => {
       setTimeout(() => {
         survey123Panel.classList.toggle('hide', (panelId !== survey123Panel.id));
         ooklaPanel.classList.toggle('hide', (panelId !== ooklaPanel.id));
-      }, delay || 500);
+      }, delay);
     };
 
   }
@@ -125,6 +125,7 @@ class Application extends Configurable {
     //
     const survey123WebForm = new Survey123WebForm({
       container: "survey123-panel",
+      jsApiVersion: '3.18',
       portalUrl: this.config.portalUrl,
       clientId: this.config.clientId,
       itemId: this.config.itemId,
@@ -167,7 +168,6 @@ class Application extends Configurable {
       }
     });
 
-
     // SPEED FORMATTER //
     const speedFormatter = new Intl.NumberFormat('default', {minimumFractionDigits: 1, maximumFractionDigits: 1});
     // CONVERT TO MBPS AND FORMAT SPEED //
@@ -198,7 +198,6 @@ class Application extends Configurable {
       // DISPLAY SURVEY123 PANEL //
       this.togglePanel('survey123-panel', 2000);
     };
-
 
     /**
      * QUESTION VALUE CHANGE
@@ -246,7 +245,7 @@ class Application extends Configurable {
           // CALL TEST COMPLETE HANDLER //
           testCompleteHandler && testCompleteHandler(event.data);
         } else {
-          console.warn("OOKLA Speedtest origin and 'ooklaUrl' configuration parameter do NOT match: ", event.origin, this.config.ooklaUrl);
+          console.log("OOKLA Speedtest origin and 'ooklaUrl' configuration parameter do NOT match: ", event.origin, this.config.ooklaUrl);
         }
       };
 

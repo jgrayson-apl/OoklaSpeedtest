@@ -1,0 +1,13 @@
+{
+  "title": "Esri Survey 123 and OOKLA Speedtest",
+  "description": "Test and submit your current internet connection speed.",
+  "portalUrl": "https://www.arcgis.com",
+  "clientId": "eU9mGLVOg9EdgLpx",
+  "itemId": "da8c83a265734990af2b22a742a5d852",
+  "surveyInternetQuestion": "internet",
+  "ooklaUrl": "https://esriapl.speedtestcustom.com",
+  "redirectOnSubmitUrl": null,
+  "questionValue": {
+    "max_distance": 100
+  }
+}
