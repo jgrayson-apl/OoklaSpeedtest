@@ -125,7 +125,7 @@ class Application extends Configurable {
     //
     const survey123WebForm = new Survey123WebForm({
       container: "survey123-panel",
-      //jsApiVersion: '3.18',
+      version: '3.18',
       portalUrl: this.config.portalUrl,
       clientId: this.config.clientId,
       itemId: this.config.itemId,
