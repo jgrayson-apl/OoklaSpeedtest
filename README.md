@@ -25,15 +25,16 @@ Collect information about connection speeds including location and user provided
 
 This demo is built as a static web application.
 
-> **IMPORTANT** - This code _MUST_ be deployed to _your own_ web accessible location; it can _NOT_ be hosted on Esri infrastructure
-
-1) Download and copy the root folder to a web accessible location
-2) Update the configuration parameters in ./config/application.json
 
 
-## Configure
+1) Download and copy the root folder to a web accessible location.
+   > **IMPORTANT** - This code _must_ be deployed to _your_ infrastructure; it can _not_ be hosted by Esri. 
+2) Update the configuration parameters in ./config/application.json; please see the next section below for more details.
 
-Update the [application.json](https://github.com/jgrayson-apl/OoklaSpeedtest/blob/master/config/application.json) file in your favorite json editor:
+
+### Configure
+
+Update the [./config/application.json](https://github.com/jgrayson-apl/OoklaSpeedtest/blob/master/config/application.json) file in your favorite json editor:
 
 |                  PARAMETER | DETAILS                                                                                                                                                                                                                                                                                                     |
 |---------------------------:|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -45,7 +46,7 @@ Update the [application.json](https://github.com/jgrayson-apl/OoklaSpeedtest/blo
 |    **redirectOnSubmitUrl** | The application will redirect to this URL on form submission                                                                                                                                                                                                                                                |
 |          **questionValue** | Set of pre-configured Survey123 questions and answers. Please see [Survey123WebFormOptions.questionValue](https://developers.arcgis.com/survey123/api-reference/web-app/Survey123WebFormOptions#questionValue) for more details.                                                                            | 
 
-### Survey123 question names & Speedtest parameters
+#### Survey123 question names & Speedtest parameters
 
 |     QUESTION NAME | PARAMETER            |
 |------------------:|----------------------|
@@ -55,7 +56,7 @@ Update the [application.json](https://github.com/jgrayson-apl/OoklaSpeedtest/blo
 |        **jitter** | data.latency.jitter  |
 |        **testId** | data.config.testId   |
 
-### Application URL parameters
+#### Application URL parameters
 
 You can use URL parameters to answer Survey123 questions. If a question with the same name as the URL parameter name is found in the survey, the URL parameter value will be used as the question's answer.
 
