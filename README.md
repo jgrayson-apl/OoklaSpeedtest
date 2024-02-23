@@ -25,9 +25,10 @@ Collect information about connection speeds including location and user provided
 
 This demo is built as a static web application.
 
-1) This code **MUST** be deployed to _your own_ web accessible location; it can **NOT** be hosted on Esri infrastructure.
-2) Download and copy the root folder to a web accessible location\
-3) Update the configuration parameters in ./config/application.json
+> **IMPORTANT** - This code _MUST_ be deployed to _your own_ web accessible location; it can _NOT_ be hosted on Esri infrastructure
+
+1) Download and copy the root folder to a web accessible location
+2) Update the configuration parameters in ./config/application.json
 
 
 ## Configure
