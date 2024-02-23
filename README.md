@@ -21,12 +21,13 @@ Collect information about connection speeds including location and user provided
 - [Passing Test Results To The Browser](https://support.ookla.com/hc/en-us/articles/115005319507-Passing-Test-Results-To-The-Browser)
 - [Storing STC results using Javascript](https://support.ookla.com/hc/en-us/articles/360000725112)
 
-## Deploy
+## Deploy 
 
 This demo is built as a static web application.
 
-1 - Download and copy the root folder to a web accessible location\
-2 - Update the configuration parameters in ./config/application.json
+1) This code **MUST** be deployed to _your own_ web accessible location; it can **NOT** be hosted on Esri infrastructure.
+2) Download and copy the root folder to a web accessible location\
+3) Update the configuration parameters in ./config/application.json
 
 ## Configure
 
