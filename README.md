@@ -28,7 +28,7 @@ This demo is built as a static web application.
 
 
 1) Download the root folder contents locally.    
-2) Update the configuration parameters in ./config/application.json; please see the next section below for more details.
+2) Update the configuration parameters in ./config/application.json; please see the 'Configure' section below for more details.
 3) Copy the root folder to a web accessible location.
    > **IMPORTANT** - This code _must_ be deployed to _your_ infrastructure; it can _not_ be hosted by Esri.
 
