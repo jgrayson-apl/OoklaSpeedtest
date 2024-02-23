@@ -29,6 +29,7 @@ This demo is built as a static web application.
 2) Download and copy the root folder to a web accessible location\
 3) Update the configuration parameters in ./config/application.json
 
+
 ## Configure
 
 Update the [application.json](https://github.com/jgrayson-apl/OoklaSpeedtest/blob/master/config/application.json) file in your favorite json editor:
