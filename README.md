@@ -12,6 +12,7 @@ Collect information about connection speeds including location and user provided
 
 [Configuration Walkthrough Video Tutorial](https://community.esri.com/t5/telecommunications-videos/tgi5-episode-073-arcgis-survey123-and-ookla/m-p/1284458)
 
+
 ## Technologies Used
 
 ### Esri Survey123
