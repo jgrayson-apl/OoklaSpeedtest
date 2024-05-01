@@ -6,6 +6,12 @@ Collect information about connection speeds including location and user provided
 
 [Community Speed Test Survey](https://geoxc-apps2.bd.esri.com/DataCollection/Survey123Speedtest/index.html)
 
+## Esri Community Resources
+ 
+[Telecommunications Community](https://community.esri.com/t5/telecommunications/ct-p/telecommunications)
+
+[Configuration Walkthrough Video Tutorial](https://community.esri.com/t5/telecommunications-videos/tgi5-episode-073-arcgis-survey123-and-ookla/m-p/1284458)
+
 ## Technologies Used
 
 ### Esri Survey123
